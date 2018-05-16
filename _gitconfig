@@ -1,0 +1,13 @@
+[user]
+	name = Ezekiel Mangalu
+	email = emangalu@jirnexu.com
+
+[alias]
+	ap = add -p
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	ci = commit -m
+	st = status
+	ps = push
+	pl = pull
+	pr = pull -r
+	fc = commit --amend --no-edit
