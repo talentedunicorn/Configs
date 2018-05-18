@@ -56,9 +56,9 @@ vnoremap <leader>r "hy:%s/<C-r>h//gc<left><left><left>
 " Navigation
 " - Buffers
 " Previous buffer
-nmap <F1> :bprev<cr>
+nmap <F1> :bprev!<cr>
 " Next buffer
-nmap <F2> :bnext<cr>
+nmap <F2> :bnext!<cr>
 " Delete buffer - leader+dd
 map <silent> <leader>d :bd<cr>
 " List buffers
@@ -124,3 +124,27 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .DS_Store
       \ --ignore "**/*.pyc"
 \ -g ""'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Install vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" vim-plug: Plugin manager
+call plug#begin()
+
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'othree/html5.vim'
+Plug 'mattn/emmet-vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'plasticboy/vim-markdown'
+Plug 'rking/ag.vim'
+Plug 'mxw/vim-jsx'
+Plug 'ap/vim-buftabline'
+Plug 'tpope/vim-commentary'
+call plug#end()

@@ -4,10 +4,13 @@
 
 [alias]
 	ap = add -p
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    b  = branch
 	ci = commit -m
-	st = status
-	ps = push
+    co = checkout
+	fc = commit --amend --no-edit
+    lc = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 1
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	pl = pull
 	pr = pull -r
-	fc = commit --amend --no-edit
+	ps = push
+	st = status
